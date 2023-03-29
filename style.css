@@ -1,0 +1,144 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+	font-family: Roman;
+	src: url("fonts/roman-bold.otf");
+	font-weight: 700;
+}
+@font-face {
+	font-family: Roman;
+	src: url("fonts/roman-book.otf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: Roman;
+	src: url("fonts/roman-bookitalic.otf");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: Roman;
+	src: url("fonts/roman-light.otf");
+	font-weight: 100;
+}
+@font-face {
+	font-family: Roman;
+	src: url("fonts/roman-lightitalic.otf");
+	font-weight: 100;
+	font-style: italic;
+}
+@font-face {
+	font-family: Bastardo;
+	src: url("fonts/bastardo.otf");
+}
+body {
+	font-family: Roman, serif;
+}
+
+/* Structure */
+.container {
+	width: 100vw;
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+}
+.cell {
+	aspect-ratio: 1 / 1;
+	position: relative;
+	transition: filter .2s, opacity .2s;
+}
+
+/* Gradient previews */
+.cell-gradient {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	transition: filter .2s;
+}
+.cell-gradient:hover {
+	filter: brightness(120%);
+}
+.cell-gradient:active {
+	filter: brightness(80%);
+}
+
+/* Show content when cell is active */
+.active {
+	z-index: 9;
+}
+.active .cell-content {
+	display: flex;
+}
+.faded .cell-gradient {
+	filter: grayscale(50%) brightness(50%);
+}
+.faded .cell-gradient:hover {
+	filter: grayscale(0%) brightness(100%);
+}
+
+/* Pop-up content */
+.cell-content {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 100%;
+	width: 200%;
+	aspect-ratio: 1 / 2;
+	background-color: white;
+	padding: 1vw;
+	flex-direction: column;
+}
+.cell-image {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	gap: .3vw;
+	margin-bottom: 1vw;
+}
+.cell-image div {
+	aspect-ratio: 1 / 1;
+}
+.cell-species {
+	font-size: 1.5vw;
+	font-weight: 100;
+	text-decoration: line-through;
+}
+.cell-name {
+	font-size: 1vw;
+	margin-bottom: 1vw;
+}
+.cell-info {
+	display: flex;
+	flex-direction: column;
+	gap: .5vw;
+	font-weight: 100;
+	font-size: 1vw;
+}
+.cell-colors {
+	position: absolute;
+	width: calc(100% - 2vw);
+	bottom: 1vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.cell-colors-entry {
+	display: flex;
+	gap: .2vw;
+	align-items: stretch;
+}
+.cell-colors-block {
+	aspect-ratio: 1 / 1;
+	background-color: black;
+	height: .9vw;
+}
+.cell-colors-text {
+	display: flex;
+	flex-direction: column;
+}
+.cell-colors-text span {
+	font-size: .5vw;
+	line-height: 1em;
+}
