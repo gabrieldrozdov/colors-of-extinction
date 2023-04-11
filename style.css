@@ -37,18 +37,29 @@
 body {
 	font-family: Roman, serif;
 }
+html {
+	font-size: 2vh;
+}
 
 /* Structure */
 .container {
 	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
 .grid {
 	display: grid;
-	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(5, 20vh);
+	grid-auto-flow: column;
+	width: 100vw;
+	overflow: scroll;
+	height: 100vh;
 }
 .cell {
 	aspect-ratio: 1 / 1;
 	position: relative;
+	width: 20vh;
+	height: 20vh;
 	transition: filter .2s, opacity .2s;
 }
 
@@ -68,7 +79,7 @@ body {
 
 /* Show content when cell is active */
 .active {
-	z-index: 9;
+	z-index: 8;
 }
 .active .cell-content {
 	display: flex;
@@ -89,56 +100,104 @@ body {
 	width: 200%;
 	aspect-ratio: 1 / 2;
 	background-color: white;
-	padding: 1vw;
+	padding: 1rem;
 	flex-direction: column;
 }
 .cell-image {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
-	gap: .3vw;
-	margin-bottom: 1vw;
+	gap: .3rem;
+	margin-bottom: 1rem;
 }
 .cell-image div {
 	aspect-ratio: 1 / 1;
 }
 .cell-species {
-	font-size: 1.5vw;
+	font-size: 1.5rem;
 	font-weight: 100;
 	text-decoration: line-through;
 }
 .cell-name {
-	font-size: 1vw;
-	margin-bottom: 1vw;
+	font-size: 1rem;
+	margin-bottom: 1rem;
 }
 .cell-info {
 	display: flex;
 	flex-direction: column;
-	gap: .5vw;
+	gap: .5rem;
 	font-weight: 100;
-	font-size: 1vw;
+	font-size: 1rem;
 }
 .cell-colors {
 	position: absolute;
-	width: calc(100% - 2vw);
-	bottom: 1vw;
+	width: calc(100% - 2rem);
+	bottom: 1rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .cell-colors-entry {
 	display: flex;
-	gap: .2vw;
+	gap: .2rem;
 	align-items: stretch;
 }
 .cell-colors-block {
 	aspect-ratio: 1 / 1;
 	background-color: black;
-	height: .9vw;
+	height: .9rem;
 }
 .cell-colors-text {
 	display: flex;
 	flex-direction: column;
 }
 .cell-colors-text span {
-	font-size: .5vw;
+	font-size: .5rem;
 	line-height: 1em;
+}
+
+/* Navigation */
+.nav-plus {
+	padding: 2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	height: 20vh;
+}
+.nav-plus-link {
+	fill: white;
+	transition: fill .2s, opacity .2s;
+}
+.nav-plus-link:hover {
+	fill: black;
+}
+.nav-plus-link:active {
+	opacity: .5;
+}
+.nav-links {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: space-around;
+	padding: .6rem;
+	position: fixed;
+	top: 20vh;
+	left: 0;
+	z-index: 9;
+	height: 20vh;
+}
+.nav-link {
+	text-decoration: none;
+	font-family: Bastardo, sans-serif;
+	color: black;
+	background-color: white;
+	line-height: 1em;
+	padding: .6rem .6rem .4rem .6rem;
+	transition: color .2s, background-color .2s, opacity .2s;
+}
+.nav-link:hover {
+	color: white;
+	background-color: black;
+}
+.nav-link:active {
+	opacity: .5;
 }
