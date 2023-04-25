@@ -11,14 +11,14 @@
 	<main class="container">
 		<div class="grid">
 			<div class="cell nav-plus">
-				<a href="" class="nav-plus-link">
+				<div class="nav-plus-link" onclick="openSubmit()">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.41 148.41"><polygon points="148.41 63.64 84.77 63.64 84.77 0 63.64 0 63.64 63.64 0 63.64 0 84.77 63.64 84.77 63.64 148.41 84.77 148.41 84.77 84.77 148.41 84.77 148.41 63.64"/></svg>
-				</a>
+				</div>
 			</div>
 			<div class="cell nav-links">
 				<a href="" class="nav-link">ABOUT</a>
 				<a href="" class="nav-link">CREATE</a>
-				<a href="" class="nav-link">CONTRIBUTE</a>
+				<div class="nav-link" onclick="openSubmit()">CONTRIBUTE</div>
 			</div>
 			<div class="cell">
 				<div class="cell-gradient" style="background:linear-gradient(90deg, #5d522d 0%, #bf874e 25%, #ed7117 50%, #f85733 75%, #c8ccc4 100%)"></div>
@@ -26,6 +26,141 @@
 			<div class="cell">
 				<div class="cell-gradient" style="background:linear-gradient(90deg, #3f1c0b 0%, #844d21 25%, #dbb183 50%, #f9e9a7 75%, #999e4c 100%)"></div>
 			</div>
+		</div>
+		<div class="form-container">
+			<div class="form-shadow" onclick="closeSubmit()"></div>
+			<form action="https://formspree.io/f/mgebrdle" method="POST" class="form" onkeydown="return event.key != 'Enter';">
+				<h2>Submit your own species</h2>
+				<div class="form-textinput">
+					<label>Scientific Name</label>
+					<input type="text" name="species" required>
+				</div>
+				<div class="form-textinput">
+					<label>Common Name</label>
+					<input type="text" name="name" required>
+				</div>
+				<div class="form-textinput">
+					<label>Year of Extinction</label>
+					<input type="text" name="extinct" required>
+				</div>
+				<div class="form-textinput">
+					<label>Cause of Extinction</label>
+					<input type="text" name="cause" required>
+				</div>
+				<div class="form-textinput">
+					<label>Country of Origin</label>
+					<input type="text" name="origin" required>
+				</div>
+				<div class="form-textinput">
+					<label>Taxa</label>
+					<input type="text" name="taxa" required>
+				</div>
+				<br>
+				<p class="form-desc">
+					Add the colors and color quantities for your species. Only use as many colors as needed. Your total quantity must equal 100.
+				</p>
+				<div class="form-grid">
+					<div class="form-colors">
+						<div class="form-colors-row form-colors-labels">
+							<label>Color</label>
+							<label>Quantity</label>
+						</div>
+						<div class="form-colors-row" data-color="1">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color1code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color1quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="2">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color2code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color2quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="3">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color3code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color3quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="4">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color4code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color4quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="5">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color5code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color5quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="6">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color6code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color6quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="7">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color7code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color7quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="8">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color8code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color8quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="9">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color9code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color9quant">
+							</div>
+						</div>
+						<div class="form-colors-row" data-color="10">
+							<div>
+								<input class="form-colors-input-color" type="color" name="color10code">
+							</div>
+							<div>
+								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color10quant">
+							</div>
+						</div>
+					</div>
+					<div class="form-griddisplay">
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+					</div>
+				</div>
+				<button class="form-submit" type="submit" style="opacity: .5; pointer-events:none;">You’ve added too few colors! Add more colors until your total is 100.</button>
+			</form>
 		</div>
 	</main>
 

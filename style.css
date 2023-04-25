@@ -52,6 +52,7 @@ html {
 	grid-template-rows: repeat(5, 20vh);
 	grid-auto-flow: column;
 	width: 100vw;
+	justify-content: start;
 	overflow: scroll;
 	height: 100vh;
 }
@@ -133,6 +134,7 @@ html {
 	width: calc(100% - 2rem);
 	bottom: 1rem;
 	display: grid;
+	row-gap: 5px;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .cell-colors-entry {
@@ -162,6 +164,7 @@ html {
 	left: 0;
 	z-index: 9;
 	height: 20vh;
+	cursor: pointer;
 }
 .nav-plus-link {
 	fill: white;
@@ -192,6 +195,7 @@ html {
 	background-color: white;
 	line-height: 1em;
 	padding: .6rem .6rem .4rem .6rem;
+	cursor: pointer;
 	transition: color .2s, background-color .2s, opacity .2s;
 }
 .nav-link:hover {
@@ -200,4 +204,174 @@ html {
 }
 .nav-link:active {
 	opacity: .5;
+}
+
+/* Submission form */
+.form-container {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	padding: 40px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	overflow-y: scroll;
+}
+.form-shadow {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity .5s;
+	background-color: rgba(0,0,0,.5);
+}
+.form {
+	transform: translateX(-100vw);
+	position: relative;
+	z-index: 9;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	max-width: 800px;
+	width: 100%;
+	height: fit-content;
+	padding: 20px;
+	gap: 20px;
+	transition: transform .5s;
+}
+.form h2 {
+	font-size: 48px;
+	background-color: black;
+	color: white;
+	padding: 20px;
+	margin: -20px -20px 0 -20px;
+}
+.form-desc {
+	font-size: 24px;
+	font-family: Bastardo, sans-serif;
+	line-height: 1.2em;
+}
+.form-textinput {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.form-textinput label {
+	font-weight: bold;
+	border: 1px solid rgba(0,0,0,.5);
+	padding: 5px;
+	border-bottom: unset;
+}
+.form-textinput input {
+	border-radius: 0px;
+	background-color: rgba(0,0,0,.1);
+	border: 1px solid rgba(0,0,0,.5);
+	padding: 13px 10px 10px 10px;
+	font-size: 24px;
+	font-family: Bastardo, sans-serif;
+	line-height: 1.2em;
+	transition: background-color .2s;
+	width: 100%;
+}
+.form-textinput input:hover {
+	background-color: rgba(0,0,0,.05);
+}
+.form-submit {
+	border: 1px solid black;
+	background-color: unset;
+	border-radius: 0;
+	padding: 15px 10px 10px 10px;
+	font-size: 24px;
+	font-family: Bastardo, sans-serif;
+	line-height: 1.2em;
+	cursor: pointer;
+	transition: background-color .2s, color .2s, opacity .2s;
+}
+.form-submit:hover {
+	background-color: black;
+	color: white;
+}
+.form-submit:active {
+	opacity: .5;
+}
+.form-grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 20px;
+	align-items: start;
+}
+.form-griddisplay {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+	gap: 2px;
+}
+.form-griddisplay div {
+	aspect-ratio: 1/1;
+	background-color: rgba(0,0,0,.05);
+}
+.form-colors {
+	display: flex;
+	flex-direction: column;
+	align-self: stretch;
+}
+.form-colors-row {
+	flex-grow: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-content: stretch;
+	margin-top: -1px;
+	border: 1px solid rgba(0,0,0,.5);
+}
+.form-colors-row[data-active="0"] {
+	display: none;
+}
+.form-colors-row div {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.form-colors-labels {
+	align-items: center !important;
+	margin-top: unset !important;
+}
+.form-colors-row label {
+	padding: 2px;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+.form-colors-row input {
+	border-radius: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,.1);
+	border: none;
+	font-size: 18px;
+	font-family: Bastardo, sans-serif;
+	line-height: 1.2em;
+	flex-grow: 1;
+	transition: background-color .2s;
+	text-align: center;
+}
+.form-colors-row input:hover {
+	background-color: rgba(0,0,0,.05);
+}
+.form-colors-input-color {
+	padding: 5px;
+	cursor: pointer;
+}
+.form-colors-input-quant {
+	padding: 6px 3px 3px 8px;
+}
+@media screen and (max-width: 800px) {
+	.form-container {
+		padding: 0px;
+	}
 }

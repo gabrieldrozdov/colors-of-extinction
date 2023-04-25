@@ -3,9 +3,225 @@
     "species": "Megupsilon aporus",
     "name": "Catarina Pupfish",
     "extinct": 1994,
-    "cause": "Destruction of habitat",
+    "cause": "Habitat Destruction",
     "origin": "Mexico",
     "taxa": "Agnatha",
-    "colors": "20% #858be2, 5% #514676, 15% #a29ba6, 30% #afad7b, 30% #b0c2cd"
+    "colors": "25% #a29ba6, 30% #b0c2cd, 20% #514676,5% #858be2, 20% #afad7b, 20% #514676"
+  },
+  {
+    "species": "Neochmina ruficauda ruficauda",
+    "name": "Eastern Star Finch",
+    "extinct": 1995,
+    "cause": "Habitat Destruction",
+    "origin": "Australia",
+    "taxa": "Aves",
+    "colors": "10% #9c2b31, 15% #f85733, 40% #8d8e65, 15% #c9c9a1, 10% #efbd6f, 10% #cec5ba"
+  },
+  {
+    "species": "Pampusana salamonis",
+    "name": "Thick-billed Ground Dove",
+    "extinct": 2005,
+    "cause": "Habitat Destruction",
+    "origin": "Solomon Islands",
+    "taxa": "Aves",
+    "colors": "15% #915a77, 15% #743938, 30% #9c8067, 40% #624939"
+  },
+  {
+    "species": "Phylidor novaesi",
+    "name": "Alagoas Foliage-Gleaner",
+    "extinct": 2019,
+    "cause": "Habitat Destruction",
+    "origin": "Brazil",
+    "taxa": "Aves",
+    "colors": "10% #251c00, 30% #b07001, 30% #b06403, 20% #fc9400, 10% #ebdd93"
+  },
+  {
+    "species": "Cichlocolaptes mazarbarnetti",
+    "name": "Cryptic Treehunter",
+    "extinct": 2019,
+    "cause": "Habitat Destruction",
+    "origin": "Brazil",
+    "taxa": "Aves",
+    "colors": "35% #c08135, 35% #a15b3a, 10% #c5800a, 10% #d6be79, 10% #090810"
+  },
+  {
+    "species": "Melamprosops phaesoma",
+    "name": "Poo-uli",
+    "extinct": 2018,
+    "cause": "Invasive species",
+    "origin": "Hawaii (USA)",
+    "taxa": "Aves",
+    "colors": "40% #584126, 20% #cd874f, 20% #fcf6e5, 10% #737174, 10% #060201"
+  },
+  {
+    "species": "Toxostoma guttatum",
+    "name": "Cozumel Thrasher",
+    "extinct": 2006,
+    "cause": "Invasive species",
+    "origin": "Mexico",
+    "taxa": "Aves",
+    "colors": "25% #fcfbf0, 25% #c89e78, 25% #ab6d3a, 15% #42322e, 5% #826f6b"
+  },
+  {
+    "species": "Glaucidium mooreorum",
+    "name": "Pernambuco Pygmy Owl",
+    "extinct": 2018,
+    "cause": "Habitat Destruction",
+    "origin": "Brazil",
+    "taxa": "Aves",
+    "colors": "15% #49453d, 40% #775a4d, 25% #b28c77, 20% #dbd4d2"
+  },
+  {
+    "species": "Numenius tenuinostris",
+    "name": "Slender-billed Curlew",
+    "extinct": 2006,
+    "cause": "Habitat Destruction",
+    "origin": "Europe, Central Asia",
+    "taxa": "Aves",
+    "colors": "25% #dddcd7, 25% #898072, 35% #423024, 15% #1e150f"
+  },
+  {
+    "species": "Allotoca goslinei",
+    "name": "Banded Alotoca",
+    "extinct": 2005,
+    "cause": "Habitat Destruction",
+    "origin": "Mexico",
+    "taxa": "Agnatha",
+    "colors": "20% #381704, 20% #764139, 20% #844d21, 20% #d5a77d, 20% #fbeca9"
+  },
+  {
+    "species": "Characodon garmani",
+    "name": "Parras Characodon",
+    "extinct": 1953,
+    "cause": "Habitat Destruction",
+    "origin": "Mexico",
+    "taxa": "Agnatha",
+    "colors": "30% #a95322, 30% #be6e35, 30% #dab08d, 10% #573f24"
+  },
+  {
+    "species": "Garra festai",
+    "name": "Ray-finned Fish",
+    "extinct": 2019,
+    "cause": "Habitat Destruction",
+    "origin": "Lebanon",
+    "taxa": "Agnatha",
+    "colors": "10% #bb844f, 30% #4b331c, 30% #7f724f, 30% #ac883b"
+  },
+  {
+    "species": "Chirostoma bartoni",
+    "name": "Alberca Silverside",
+    "extinct": 2006,
+    "cause": "Habitat Destruction",
+    "origin": "Mexico",
+    "taxa": "Agnatha",
+    "colors": "10% #9ba250, 10% #616450, 30% #696c43, 40% #97a08d, 10% #80a187"
+  },
+  {
+    "species": "Psephorus gladius",
+    "name": "Chinese Paddlefish",
+    "extinct": 2020,
+    "cause": "Habitat Destruction",
+    "origin": "China",
+    "taxa": "Agnatha",
+    "colors": "10% #5b5542, 20% #76705a, 30% #8f8d79, 40% #cec8b5"
+  },
+  {
+    "species": "Atelopus chiriquiensis",
+    "name": "Chiriqui Harlequin Frog",
+    "extinct": 1996,
+    "cause": "Habitat Destruction",
+    "origin": "Costa Rica, Panama",
+    "taxa": "Amphibia",
+    "colors": "35% #3f2935, 25% #5d3130, 10% #b65b4e, 15% #aac1ca, 15% #98811d"
+  },
+  {
+    "species": "Nectophrynoides asperginis",
+    "name": "Kihansi Spray Toad",
+    "extinct": 2009,
+    "cause": "Habitat Destruction",
+    "origin": "Tanzania",
+    "taxa": "Amphibia",
+    "colors": "20% #010103, 20% #ae6100, 20% #f0a644, 20% #fbde42, 20% #e0d89f"
+  },
+  {
+    "species": "Atelopus pinangoi",
+    "name": "Green and Red Harlequin Toad",
+    "extinct": 2012,
+    "cause": "Habitat Destruction",
+    "origin": "Venezuela",
+    "taxa": "Amphibia",
+    "colors": "10% #191517, 15% #cb5511, 15% #ce7416, 60% #e7ba20"
+  },
+  {
+    "species": "Telmatobius mendelsoni",
+    "name": "Telmatobius mendelsoni",
+    "extinct": 2012,
+    "cause": "Invasive species",
+    "origin": "Peru",
+    "taxa": "Amphibia",
+    "colors": "20% #ac99a7, 35% #8e6b72, 35% #5f3235, 10% #4d312a"
+  },
+  {
+    "species": "Eleutherodactylus brevirostris",
+    "name": "Short-nosed Green Frog",
+    "extinct": 2006,
+    "cause": "Habitat Destruction",
+    "origin": "Haiti",
+    "taxa": "Amphibia",
+    "colors": "40% #6a965c, 20% #495f2b, 30% #582814, 10% #9e6a3a"
+  },
+  {
+    "species": "Nymphargus truebae",
+    "name": "Trueb's Cochran Frog",
+    "extinct": 2005,
+    "cause": "Habitat Destruction",
+    "origin": "Peru",
+    "taxa": "Amphibia",
+    "colors": "10% #1a3a36, 25% #1d5023, 30% #86983f, 20% #aea66d, 15% #f7efdc"
+  },
+  {
+    "species": "Nectophrynoides poyntoni",
+    "name": "Poynton's Forest Toad",
+    "extinct": 2003,
+    "cause": "Habitat Destruction",
+    "origin": "Tanzania",
+    "taxa": "Amphibia",
+    "colors": "35% #4b5258, 25% #9a989a, 25% #898176, 15% #d6b393"
+  },
+  {
+    "species": "Atelopus farci",
+    "name": "Forest Stubfoot Toad",
+    "extinct": 2003,
+    "cause": "Habitat Destruction & Invasive Species",
+    "origin": "Colombia",
+    "taxa": "Amphibia",
+    "colors": "45% #4d3e2f, 20% #6e564d, 20% #985b50, 15% #596360"
+  },
+  {
+    "species": "Atelopus simulatus",
+    "name": "Imitating Stubfoot Toad",
+    "extinct": 2003,
+    "cause": "Habitat Destruction & Invasive Species",
+    "origin": "Colombia",
+    "taxa": "Amphibia",
+    "colors": "40% #260507, 25% #8b2909, 25% #969b6f, 10% #8b8726"
+  },
+  {
+    "species": "Altiphrynoides osgodii",
+    "name": "Osgood's Ethiopean Toad",
+    "extinct": 2003,
+    "cause": "Habitat Destruction",
+    "origin": "Ethiopia",
+    "taxa": "Amphibia",
+    "colors": "30% #423527, 30% #7c5f33, 30% #b9a376, 10% #e7d79b"
+  },
+  {
+    "species": "Atelopus sernai",
+    "name": "Atelopus sernai",
+    "extinct": 2001,
+    "cause": "Habitat Destruction",
+    "origin": "Colombia",
+    "taxa": "Amphibia",
+    "colors": "20% #4c201a, 10% #803513, 30% #cad74a, 40% #9cd300"
   }
 ]
