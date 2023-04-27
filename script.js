@@ -1,108 +1,5 @@
 let grid = document.querySelector('.grid');
 
-// // Generate random cells for testing
-// let totalCells = 100;
-// for (let i=0; i<totalCells; i++) {
-// 	let cell = document.createElement('div');
-// 	cell.classList = "cell";
-// 	cell.dataset.position = i;
-// 
-// 	let colors = [
-// 		Math.floor(Math.random() * 2 ** 24).toString(16).padStart(6, "0"),
-// 		Math.floor(Math.random() * 2 ** 24).toString(16).padStart(6, "0"),
-// 		Math.floor(Math.random() * 2 ** 24).toString(16).padStart(6, "0"),
-// 		Math.floor(Math.random() * 2 ** 24).toString(16).padStart(6, "0"),
-// 		Math.floor(Math.random() * 2 ** 24).toString(16).padStart(6, "0"),
-// 	]
-// 
-// 	let cellImage = "";
-// 
-// 	// Color ranges
-// 	let max = 100-Math.floor(Math.random()*50+1);
-// 	function randombetween(min, max) {
-// 		return Math.floor(Math.random()*(max-min+1)+min);
-// 	}
-// 	let r1 = randombetween(5, max-3);
-// 	let r2 = randombetween(5, max-2-r1);
-// 	let r3 = randombetween(5, max-1-r1-r2);
-// 	let r4 = max - r1 - r2 - r3;
-// 
-// 	for (let j=0; j<100; j++) {
-// 		if (j < r1) {
-// 			cellImage += `<div style='background-color:#${colors[0]}'></div>`;
-// 		} else if (j < r1+r2) {
-// 			cellImage += `<div style='background-color:#${colors[1]}'></div>`;
-// 		} else if (j < r1+r2+r3) {
-// 			cellImage += `<div style='background-color:#${colors[2]}'></div>`;
-// 		} else if (j < r1+r2+r3+r4) {
-// 			cellImage += `<div style='background-color:#${colors[3]}'></div>`;
-// 		} else {
-// 			cellImage += `<div style='background-color:#${colors[4]}'></div>`;
-// 		}
-// 	}
-// 
-// 	let cellInfo = `
-// 		<div class="cell-gradient" style="background:linear-gradient(90deg, #${colors[0]} 0%, #${colors[1]} ${r1}%, #${colors[2]} ${r1+r2}%, #${colors[3]} ${r1+r2+r3}%, #${colors[4]} 100%)"></div>
-// 		<div class="cell-content">
-// 			<div class="cell-image">
-// 				${cellImage}
-// 			</div>
-// 			<h2 class="cell-species">Megupsilon aporus</h2>
-// 			<h3 class="cell-name">Catarina Pupfish</h3>
-// 			<div class="cell-info">
-// 				<p><strong>Extinct:</strong> 1994</p>
-// 				<p><strong>Cause:</strong> Destruction of habitat</p>
-// 				<p><strong>Origin:</strong> Mexico</p>
-// 				<p><strong>Taxa:</strong> Agnatha</p>
-// 			</div>
-// 			<div class="cell-colors">
-// 				<div class="cell-colors-entry">
-// 					<div class="cell-colors-block" style="background-color: #${colors[0]}"></div>
-// 					<div class="cell-colors-text">
-// 						<span><strong>HEX</strong></span>
-// 						<span>${colors[0]}</span>
-// 					</div>
-// 				</div>
-// 				<div class="cell-colors-entry">
-// 					<div class="cell-colors-block" style="background-color: #${colors[1]}"></div>
-// 					<div class="cell-colors-text">
-// 						<span><strong>HEX</strong></span>
-// 						<span>${colors[1]}</span>
-// 					</div>
-// 				</div>
-// 				<div class="cell-colors-entry">
-// 					<div class="cell-colors-block" style=background-color: #${colors[2]}"></div>
-// 					<div class="cell-colors-text">
-// 						<span><strong>HEX</strong></span>
-// 						<span>${colors[2]}</span>
-// 					</div>
-// 				</div>
-// 				<div class="cell-colors-entry">
-// 					<div class="cell-colors-block" style="background-color: #${colors[3]}"></div>
-// 					<div class="cell-colors-text">
-// 						<span><strong>HEX</strong></span>
-// 						<span>${colors[3]}</span>
-// 					</div>
-// 				</div>
-// 				<div class="cell-colors-entry">
-// 					<div class="cell-colors-block" style="background-color: #${colors[4]}"></div>
-// 					<div class="cell-colors-text">
-// 						<span><strong>HEX</strong></span>
-// 						<span>${colors[4]}</span>
-// 					</div>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	`
-// 	cell.innerHTML += cellInfo;
-// 
-// 	grid.appendChild(cell);
-// 	let gradient = cell.querySelector(".cell-gradient");
-// 	gradient.addEventListener('click', () => { highlight(cell) })
-// }
-// 
-// let cells = document.querySelectorAll(".cell");
-
 // Fetch data from JSON and generate cells
 let jsonBackup;
 let cells;
@@ -110,28 +7,27 @@ fetch('data.json')
 	.then((response) => response.json())
 	.then((json) => {
 		jsonBackup = json;
-		totalCells = json.length
+		totalCells = json.length;
+
+		// Create cells
 		for (let i=0; i<json.length; i++) {
 			let cell = document.createElement('div');
-			cell.classList = "cell";
-			cell.dataset.position = i;
-			let colors = json[i]["colors"].split(',');
+			cell.classList.add("cell");
+			cell.id = i;
 
-			// Create pixel image
-			let cellImage = "";
+			// Parse colors to create gradient
 			let cellGradient = "";
 			let prevPercent = 0;
-			let cellHex = "";
+			let colors = json[i]["colors"].split(',');
 			for (let j=0; j<colors.length; j++) {
 				let colorSplit = colors[j].split(' ');
+
+				// Remove extra space if added by accident
 				if (colorSplit.length == 3) {
-					colorSplit = [colorSplit[1], colorSplit[2]]
+					colorSplit = [colorSplit[1], colorSplit[2]];
 				}
 
-				for (let k=0; k<parseInt(colorSplit[0]); k++) {
-					cellImage += `<div style='background-color:${colorSplit[1]}'></div>`;
-				}
-
+				// Create gradient
 				if (j==0) {
 					cellGradient += colorSplit[1] + " 0%, "
 				} else if (j==colors.length - 1) {
@@ -140,138 +36,250 @@ fetch('data.json')
 					cellGradient += colorSplit[1] + " " + parseInt(parseInt(colorSplit[0])+prevPercent) + "%, ";
 				}
 				prevPercent = parseInt(colorSplit[0])+prevPercent;
-
-				cellHex += `
-					<div class="cell-colors-entry">
-						<div class="cell-colors-block" style="background-color: ${colorSplit[1]}"></div>
-						<div class="cell-colors-text">
-							<span><strong>HEX</strong></span>
-							<span>${colorSplit[1].slice(1)}</span>
-						</div>
-					</div>
-				`
 			}
+			cell.style.background = `linear-gradient(90deg, ${cellGradient})`;
 
-			// Populate info
-			let cellInfo = `
-				<div class="cell-gradient" style="background:linear-gradient(90deg, ${cellGradient})"></div>
-				<div class="cell-content">
-					<div class="cell-image">
-						${cellImage}
-					</div>
-					<h2 class="cell-species">${json[i]["species"]}</h2>
-					<h3 class="cell-name">${json[i]["name"]}</h3>
-					<div class="cell-info">
-						<p><strong>Extinct:</strong> ${json[i]["extinct"]}</p>
-						<p><strong>Cause:</strong> ${json[i]["cause"]}</p>
-						<p><strong>Origin:</strong> ${json[i]["origin"]}</p>
-						<p><strong>Taxa:</strong> ${json[i]["taxa"]}</p>
-					</div>
-					<div class="cell-colors">
-						${cellHex}
-					</div>
-				</div>
-			`
-			cell.innerHTML += cellInfo;
-	
+			cell.addEventListener('click', (e) => { highlight(cell, e) })
+			
 			grid.appendChild(cell);
-			let gradient = cell.querySelector(".cell-gradient");
-			gradient.addEventListener('click', () => { highlight(cell) })
 		}
-		cells = document.querySelectorAll(".cell");
 	});
 
+let infoGrid = document.querySelector(".cell-grid");
+let infoSpecies = document.querySelector(".cell-species");
+let infoName = document.querySelector(".cell-name");
+let infoExtinct = document.querySelector("#cell-info-extinct");
+let infoCause = document.querySelector("#cell-info-cause");
+let infoOrigin = document.querySelector("#cell-info-origin");
+let infoTaxa = document.querySelector("#cell-info-taxa");
+let infoColors = document.querySelector(".cell-colors");
+function generateContent(id) {
+
+	// Create pixel image
+	let cellGrid = "";
+	let cellHex = "";
+
+	// Parse colors
+	let colors = jsonBackup[id]["colors"].split(',');
+	for (let i=0; i<colors.length; i++) {
+		let colorSplit = colors[i].split(' ');
+
+		// Remove extra space if added by accident
+		if (colorSplit.length == 3) {
+			colorSplit = [colorSplit[1], colorSplit[2]];
+		}
+
+		// Add pixels to the grid
+		for (let j=0; j<parseInt(colorSplit[0]); j++) {
+			cellGrid += `<div style='background-color:${colorSplit[1]}'></div>`;
+		}
+
+		// Add hex values
+		cellHex += `
+			<div class="cell-colors-entry">
+				<div class="cell-colors-block" style="background-color: ${colorSplit[1]}"></div>
+				<div class="cell-colors-text">
+					<span><strong>HEX</strong></span>
+					<span>${colorSplit[1].slice(1)}</span>
+				</div>
+			</div>
+		`
+	}
+
+	// Populate info
+	infoGrid.innerHTML = cellGrid;
+	infoSpecies.innerText = jsonBackup[id]["species"];
+	infoName.innerText = jsonBackup[id]["name"];
+	infoExtinct.innerText = jsonBackup[id]["extinct"];
+	infoCause.innerText = jsonBackup[id]["cause"];
+	infoOrigin.innerText = jsonBackup[id]["origin"];
+	infoTaxa.innerText = jsonBackup[id]["taxa"];
+	infoColors.innerHTML = cellHex;
+}
+
 // Show info when clicking on a cell
-function highlight(cell) {
-	if (cell.classList.contains("active")) {
+let cellContent = document.querySelector(".cell-content");
+function highlight(cell, e) {
+	let cells = document.querySelectorAll(".cell");
+	if (cell.classList.contains("active")) { // Remove highlight
 		for (let i of cells) {
 			cell.classList.remove("active");
 			i.classList.remove("faded");
 		}
-	} else {
+		cellContent.style.transform = "translateY(-100vh)";
+	} else { // Highlight cell
 		for (let i of cells) {
 			i.classList.remove("active");
 			i.classList.add("faded");
 		}
-	
-		// Position cell content to be visible
-		let cellContent = cell.querySelector(".cell-content");
-		if ((parseInt(cell.dataset.position)+2)%5 == 2) {
-			cellContent.style.top = "-100%";
-		} else if ((parseInt(cell.dataset.position)+2)%5 == 3) {
-			cellContent.style.top = "-200%";
-		} else if ((parseInt(cell.dataset.position)+2)%5 == 4) {
-			cellContent.style.top = "-300%";
-		}
-		let remainder = (totalCells+2)%5;
-		if (remainder == 0) {
-			remainder = 10;
-		} else {
-			remainder = remainder + 5;
-		}
-		if (totalCells - parseInt(cell.dataset.position) <= remainder) {
-			cellContent.style.left = "-200%";
-		}
-	
 		cell.classList.add("active");
 		cell.classList.remove("faded");
+
+		// Generate content
+		let id = cell.id;
+		generateContent(id);
+		cellContent.style.transform = "translateY(0vh)";
+	
+		// Vertical positioning
+		if ((parseInt(id)+1)%5 == 0) {
+			cellContent.style.top = "0vh";
+		} else if ((parseInt(id)+1)%5 == 1) {
+			cellContent.style.top = "0vh";
+		} else if ((parseInt(id)+1)%5 == 2) {
+			cellContent.style.top = "20vh";
+		} else if ((parseInt(id)+1)%5 == 3) {
+			cellContent.style.top = "20vh";
+		} else if ((parseInt(id)+1)%5 == 4) {
+			cellContent.style.top = "20vh";
+		}
+
+		// Horizontal positioning
+		let posX = (Math.floor((parseInt(id)+1)/5)+1)*20;
+		if (e.clientX > window.innerWidth/2) {
+			cellContent.style.left = `${posX-60}vh`;
+		} else {
+			cellContent.style.left = `${posX}vh`;
+		}
 	}
+}
+
+// Close entry manually
+function closeEntry() {
+	let cells = document.querySelectorAll(".cell");
+	for (let i of cells) {
+		i.classList.remove("active");
+		i.classList.remove("faded");
+	}
+	cellContent.style.transform = "translateY(-100vh)";
+}
+
+// Menu in and out
+let navToggle = document.querySelector("#nav-toggle");
+let navPlus = document.querySelector("#nav-toggle svg");
+let navLinks = document.querySelector("#nav-links");
+let menuState = false;
+function menuToggle() {
+	if (menuState == false) {
+		grid.style.pointerEvents = "none";
+		grid.style.filter = "grayscale(100%) brightness(50%)";
+		cellContent.style.pointerEvents = "none";
+		cellContent.style.filter = "grayscale(100%) brightness(50%)";
+		navPlus.style.transform = "rotate(45deg)";
+		navLinks.style.transform = "translateX(0%)";
+		menuState = true;
+	} else {
+		grid.style.pointerEvents = "all";
+		grid.style.filter = "grayscale(0%) brightness(100%)";
+		cellContent.style.pointerEvents = "all";
+		cellContent.style.filter = "grayscale(0%) brightness(100%)";
+		navPlus.style.transform = "rotate(0deg)";
+		navLinks.style.transform = "translateX(-100%)";
+		menuState = false;
+	}
+}
+
+// About in and out
+let about = document.querySelector(".about");
+function aboutIn() {
+	about.style.transform = "translateY(0%)";
+}
+function aboutOut() {
+	about.style.transform = "translateY(100%)";
 }
 
 // Form in and out
-let form = document.querySelector(".form-container");
-let formShadow = document.querySelector(".form-shadow");
-let formContent = document.querySelector(".form");
-function openSubmit() {
-	form.style.pointerEvents = "all";
-	formShadow.style.opacity = 1;
-	formContent.style.transform = "translate(0)";
+let form = document.querySelector(".form");
+function formIn() {
+	form.style.transform = "translateY(0%)";
 }
-function closeSubmit() {
-	form.style.pointerEvents = "none";
-	formShadow.style.opacity = 0;
-	formContent.style.transform = "translate(-100vw)";
+function formOut() {
+	form.style.transform = "translateY(100%)";
 }
 
-// Counting colors for the form
-let colorCodes = document.querySelectorAll(".form-colors-input-color");
-let colorQuants = document.querySelectorAll(".form-colors-input-quant");
-let gridCells = document.querySelectorAll(".form-griddisplay div");
-let totalQuant = 0;
-let hexCodes = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
-let formSubmit = document.querySelector(".form-submit");
-for (let i=0; i<colorCodes.length; i++) {
-	colorCodes[i].value = `#${hexCodes[Math.floor(Math.random()*hexCodes.length)]}${hexCodes[Math.floor(Math.random()*hexCodes.length)]}${hexCodes[Math.floor(Math.random()*hexCodes.length)]}${hexCodes[Math.floor(Math.random()*hexCodes.length)]}${hexCodes[Math.floor(Math.random()*hexCodes.length)]}${hexCodes[Math.floor(Math.random()*hexCodes.length)]}`;
-	colorCodes[i].addEventListener("change", calcQuant)
-	colorQuants[i].addEventListener("change", calcQuant)
+// Detect if mouse is pressed
+let mousedown = false;
+document.addEventListener("mousedown", () => {mousedown = true});
+document.addEventListener("mouseup", () => {mousedown = false});
+
+// Pick color for submission form
+let formColor = document.querySelector(".form-color");
+let formColorIndicator = document.querySelector(".form-color-indicator");
+formColor.addEventListener("mousedown", pickColor1);
+formColor.addEventListener("mousemove", pickColor2);
+let formColorSelection = `hsl(180, 100%, 50%)`;
+function pickColor1(e) {
+	let rect = formColor.getBoundingClientRect();
+	let x = (e.clientX-rect.left)/formColor.offsetWidth;
+	let y = (e.clientY-rect.top)/formColor.offsetHeight;
+	if (x<0) {x=0};
+	if (y<0) {y=0};
+	if (x>1) {x=1};
+	if (y>1) {y=1};
+	formColorSelection = `hsl(${360*x},100%,${-100*y+100}%)`;
+	formColorIndicator.style.left = `calc(${x*100}% - .75rem)`;
+	formColorIndicator.style.top = `calc(${y*100}% - .75rem)`;
+	formColorIndicator.style.backgroundColor = formColorSelection;
 }
-function calcQuant() {
-	totalQuant = 0;
-	for (let i=0; i<colorCodes.length; i++) {
-		let code = colorCodes[i].value;
-		let quant = parseInt(colorQuants[i].value);
-		if (quant > 0) {
-			for (let j=totalQuant; j<totalQuant+quant && j<100; j++) {
-				gridCells[j].style.backgroundColor = code;
+function pickColor2(e) {
+	if (mousedown) {
+		let rect = formColor.getBoundingClientRect();
+		let x = (e.clientX-rect.left)/formColor.offsetWidth;
+		let y = (e.clientY-rect.top)/formColor.offsetHeight;
+		if (x<0) {x=0};
+		if (y<0) {y=0};
+		if (x>1) {x=1};
+		if (y>1) {y=1};
+		formColorSelection = `hsl(${360*x},100%,${-100*y+100}%)`;
+		formColorIndicator.style.left = `calc(${x*100}% - .75rem)`;
+		formColorIndicator.style.top = `calc(${y*100}% - .75rem)`;
+		formColorIndicator.style.backgroundColor = formColorSelection;
+	}
+}
+
+// Set color of pixel on grid for submission form
+let formGrid = document.querySelector(".form-grid");
+for (let i of formGrid.querySelectorAll("div")) {
+	i.addEventListener("mousedown", () => {setColor1(i)});
+	i.addEventListener("mousemove", () => {setColor2(i)});
+}
+function setColor1(e) {
+	e.style.backgroundColor = formColorSelection;
+	trackColor();
+}
+function setColor2(e) {
+	if (mousedown) {
+		e.style.backgroundColor = formColorSelection;
+		trackColor();
+	}
+}
+
+// Update input field as colors get added
+let formColorInput = document.querySelector(".form-colorinput");
+let formColors = {};
+let submit = document.querySelector(".form-submit");
+let submitAlert = document.querySelector(".form-submit-alert");
+function trackColor() {
+	formColors = {};
+	for (let i of formGrid.querySelectorAll("div")) {
+		let color = String(i.style.backgroundColor);
+		if (color != "") {
+			if (color in formColors) {
+				formColors[color] = formColors[color] + 1;
+			} else {
+				formColors[color] = 1;
 			}
-			totalQuant += quant;
 		}
 	}
-	for (let i=totalQuant; i<100; i++) {
-		gridCells[i].style.backgroundColor = "rgba(0,0,0,.05)";
+	formColorInput.value = JSON.stringify(formColors);
+	
+	let count = 0;
+	for (let key of Object.keys(formColors)) {
+		count += formColors[key];
 	}
-	console.log(totalQuant);
-	if (totalQuant>100) {
-		formSubmit.style.opacity = .5;
-		formSubmit.style.pointerEvents = "none";
-		formSubmit.innerText = "You’ve added too many colors! Remove colors until your total is 100."
-	} else if (totalQuant != 100) {
-		formSubmit.style.opacity = .5;
-		formSubmit.style.pointerEvents = "none";
-		formSubmit.innerText = "You’ve added too few colors! Add more colors until your total is 100."
-	} else {
-		formSubmit.style.opacity = 1;
-		formSubmit.style.pointerEvents = "all";
-		formSubmit.innerText = "Submit"
+	if (count == 100) {
+		submit.style.opacity = 1;
+		submit.style.pointerEvents = "all";
+		submit.style.backgroundColor = "white";
+		submitAlert.style.display = "none";
 	}
 }

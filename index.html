@@ -9,144 +9,78 @@
 </head>
 <body>
 	<main class="container">
+
+		<!-- Menu -->
+		<div class="cell nav-toggle" id="nav-toggle" onclick="menuToggle(); aboutOut(); formOut();">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.41 148.41"><polygon points="148.41 63.64 84.77 63.64 84.77 0 63.64 0 63.64 63.64 0 63.64 0 84.77 63.64 84.77 63.64 148.41 84.77 148.41 84.77 84.77 148.41 84.77 148.41 63.64"/></svg>
+		</div>
+		<div class="cell nav-links" id="nav-links">
+			<div class="nav-link" onclick="aboutIn(); formOut();">ABOUT</div>
+			<div class="nav-link" onclick="window.print();">CREATE</div>
+			<div class="nav-link" onclick="formIn(); aboutOut();">CONTRIBUTE</div>
+		</div>
+
+		<!-- Entry info -->
+		<div class="cell-content">
+			<div class="cell-close" onclick="closeEntry()">CLOSE ENTRY</div>
+			<div class="cell-grid"></div>
+			<h2 class="cell-species">Species Name</h2>
+			<h3 class="cell-name">Select a cell to print it!</h3>
+			<div class="cell-info">
+				<p><strong>Extinct:</strong> <span id="cell-info-extinct">____</span></p>
+				<p><strong>Cause:</strong> <span id="cell-info-cause">____</span></p>
+				<p><strong>Origin:</strong> <span id="cell-info-origin">____</span></p>
+				<p><strong>Taxa:</strong> <span id="cell-info-taxa">____</span></p>
+			</div>
+			<div class="cell-colors"></div>
+		</div>
+
+		<!-- Main content -->
 		<div class="grid">
-			<div class="cell nav-plus">
-				<div class="nav-plus-link" onclick="openSubmit()">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.41 148.41"><polygon points="148.41 63.64 84.77 63.64 84.77 0 63.64 0 63.64 63.64 0 63.64 0 84.77 63.64 84.77 63.64 148.41 84.77 148.41 84.77 84.77 148.41 84.77 148.41 63.64"/></svg>
-				</div>
-			</div>
-			<div class="cell nav-links">
-				<a href="" class="nav-link">ABOUT</a>
-				<a href="" class="nav-link">CREATE</a>
-				<div class="nav-link" onclick="openSubmit()">CONTRIBUTE</div>
-			</div>
-			<div class="cell">
-				<div class="cell-gradient" style="background:linear-gradient(90deg, #5d522d 0%, #bf874e 25%, #ed7117 50%, #f85733 75%, #c8ccc4 100%)"></div>
-			</div>
-			<div class="cell">
-				<div class="cell-gradient" style="background:linear-gradient(90deg, #3f1c0b 0%, #844d21 25%, #dbb183 50%, #f9e9a7 75%, #999e4c 100%)"></div>
+			<!-- Dummy content underneath menu -->
+			<div class="cell" style="background:linear-gradient(90deg, #5d522d 0%, #bf874e 25%, #ed7117 50%, #f85733 75%, #c8ccc4 100%)"></div>
 			</div>
 		</div>
-		<div class="form-container">
-			<div class="form-shadow" onclick="closeSubmit()"></div>
-			<form action="https://formspree.io/f/mgebrdle" method="POST" class="form" onkeydown="return event.key != 'Enter';">
-				<h2>Submit your own species</h2>
-				<div class="form-textinput">
-					<label>Scientific Name</label>
-					<input type="text" name="species" required>
+
+		<div class="about">
+			<h2 class="about-heading">COLORS OF EXTINCTION</h2>
+			<div class="about-content">
+				<div class="about-column">
+					<p><em>Colors of Extinction</em> is one of the core thesis projects I worked on. Extinction as a concept formed a personal area of interest before deciding to go to grad school. The idea that something ceases to exist always fascinated and terrified me. Once discovering that we are currently going through an event of mass extinction, caused by humans, quickly became my focus area of research.</p>
+					<p>While we often hear, read and see the topic of extinction mentioned in the media we consume, I hardly ever further investigated how other people feel and think about said topic. It represents a rather abstract idea and often overwhelms people so much that they stop to engage altogether.</p>
+					<p>Most of the times when I broach the topic of mass extinction, I find out that people rarely know about it. Sure, people have heard about deforestation and saving whales but not that we are losing species permanently at an unprecedented speed.</p>
+					<p>My argument is that the disengagement of the general population with the topic of extinction has to do with a barrier to accessing information easily through visually stimulating channels. There are environmental organisations and NGOs that offer insights into endangered species and extinction but information is not easily accessible, often dry visually and sometimes even deterring.</p>
+					<p>The project <em>Colors of Extinction</em> tries to tackle the status quo by following the idea of Access Through Ambigity: I wanted to create a color archive that not only documents the process of extinction but also wanted to establish a design framework that invites engagement and participation with the aim of involving a wider audience.</p>
+					<p>The structure of the online archive is based on proportional color profiles that serve a multitude of purposes. The archive acts as a channel to access information about extinction generally, specifically for individual species, preserve the memory of a former existence of species and as a color tool for designers through a graphic framework.</p>
+					<p>The aim of <em>Colors of Extinction</em> is not only to offer access to information but to transform the way archives work from a focus of mere documentation to a collaborative process of collective conservation of data.</p>
 				</div>
-				<div class="form-textinput">
-					<label>Common Name</label>
-					<input type="text" name="name" required>
+				<div class="about-column">
+					<p><em>The Holocene extinction, or Anthropocene extinction, is the ongoing extinction event during the Holocene epoch. The extinctions span numerous families of plants and animals, including mammals, birds, reptiles, amphibians, fish, invertebrates, and affecting not just terrestrial species but also large sectors of marine life. With widespread degradation of biodiversity hotspots, such as coral reefs and rainforests, as well as other areas, the vast majority of these extinctions are thought to be undocumented, as the species are undiscovered at the time of their extinction, which goes unrecorded. The current rate of extinction of species is estimated at 100 to 1,000 times higher than natural background extinction rates, and is increasing.</em></p>
+					<p><em>During the past 100–200 years, biodiversity loss and species extinction have accelerated, to the point that most conservation biologists now believe that human activity has either produced a period of mass extinction, or is on the cusp of doing so. As such, after the Big Five mass extinctions, the Holocene extinction event has also been referred to as the sixth mass extinction or sixth extinction given the recent recognition of the Capitanian mass extinction, the term seventh mass extinction has also been proposed for the Holocene extinction event.</em></p>
+					<p><em>The most popular theory is that human overhunting of species added to existing stress conditions as the Holocene extinction coincides with human colonization of many new areas around the world. Although there is debate regarding how much human predation and habitat loss affected their decline, certain population declines have been directly correlated with the onset of human activity, such as the extinction events of New Zealand and Hawaii. Aside from humans, climate change may have been a driving factor in the megafaunal extinctions, especially at the end of the Pleistocene.</em></p>
+					<p><em>In the twentieth century, human numbers quadrupled, and the size of the global economy increased twenty-five-fold. This Great Acceleration or Anthropocene epoch has also accelerated species extinction. Ecologically, humanity is now an unprecedented global superpredator, which consistently preys on the adults of other apex predators, takes over other species essential habitats and displaces them, and has worldwide effects on food webs. There have been extinctions of species on every land mass and in every ocean; there are many famous examples within Africa, Asia, Europe, Australia, North and South America, and on smaller islands.</em></p>
 				</div>
-				<div class="form-textinput">
-					<label>Year of Extinction</label>
-					<input type="text" name="extinct" required>
-				</div>
-				<div class="form-textinput">
-					<label>Cause of Extinction</label>
-					<input type="text" name="cause" required>
-				</div>
-				<div class="form-textinput">
-					<label>Country of Origin</label>
-					<input type="text" name="origin" required>
-				</div>
-				<div class="form-textinput">
-					<label>Taxa</label>
-					<input type="text" name="taxa" required>
-				</div>
-				<br>
-				<p class="form-desc">
-					Add the colors and color quantities for your species. Only use as many colors as needed. Your total quantity must equal 100.
-				</p>
-				<div class="form-grid">
-					<div class="form-colors">
-						<div class="form-colors-row form-colors-labels">
-							<label>Color</label>
-							<label>Quantity</label>
-						</div>
-						<div class="form-colors-row" data-color="1">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color1code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color1quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="2">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color2code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color2quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="3">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color3code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color3quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="4">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color4code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color4quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="5">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color5code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color5quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="6">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color6code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color6quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="7">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color7code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color7quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="8">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color8code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color8quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="9">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color9code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color9quant">
-							</div>
-						</div>
-						<div class="form-colors-row" data-color="10">
-							<div>
-								<input class="form-colors-input-color" type="color" name="color10code">
-							</div>
-							<div>
-								<input class="form-colors-input-quant" type="number" value="0" min="0" max="100" name="color10quant">
-							</div>
-						</div>
+			</div>
+			<div>
+				<br><a class="about-credit" href="https://moritzlonyay.design/" target="_blank">Project and design by Mórtiz Lonyay</a>
+				<br><a class="about-credit" href="https://www.gabrieldrozdov.com/" target="_blank">Website developed by Gabriel Drozdov</a>
+			</div>
+		</div>
+
+		<!-- Contribute Form -->
+		<form action="https://formspree.io/f/mgebrdle" method="POST" class="form" onkeydown="return event.key != 'Enter';">
+			<h2 class="form-heading">ADD SPECIES PROFILE</h2>
+			<div class="form-content">
+				<div class="form-column">
+					<div class="form-color">
+						<div class="form-color-indicator"></div>
 					</div>
-					<div class="form-griddisplay">
+					<p class="form-desc">
+						Click to pick a color and fill in the grid.
+					</p>
+				</div>
+				<div class="form-column">
+					<div class="form-grid">
 						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
@@ -158,9 +92,42 @@
 						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 					</div>
+
+					<input class="form-colorinput" type="text" name="color" required>
+
+					<div class="form-info">
+						<div class="form-textinput">
+							<label>Latin&nbsp;Name:</label>
+							<input type="text" name="species" required>
+						</div>
+						<div class="form-textinput">
+							<label>English&nbsp;Name:</label>
+							<input type="text" name="name" required>
+						</div>
+						<div class="form-textinput">
+							<label>Year:</label>
+							<input type="text" name="extinct" required>
+						</div>
+						<div class="form-textinput">
+							<label>Cause:</label>
+							<input type="text" name="cause" required>
+						</div>
+						<div class="form-textinput">
+							<label>Origin:</label>
+							<input type="text" name="origin" required>
+						</div>
+						<div class="form-textinput">
+							<label>Taxa:</label>
+							<input type="text" name="taxa" required>
+						</div>
+					</div>
 				</div>
-				<button class="form-submit" type="submit" style="opacity: .5; pointer-events:none;">You’ve added too few colors! Add more colors until your total is 100.</button>
-			</form>
+			</div>
+			<div class="form-submit-container">
+				<button class="form-submit" type="submit">SUBMIT</button>
+				<p class="form-submit-alert">Please fill in the entire grid before submitting!</p>
+			</div>
+		</form>
 		</div>
 	</main>
 

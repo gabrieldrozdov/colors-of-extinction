@@ -6,7 +6,7 @@
     "cause": "Habitat Destruction",
     "origin": "Mexico",
     "taxa": "Agnatha",
-    "colors": "25% #a29ba6, 30% #b0c2cd, 20% #514676,5% #858be2, 20% #afad7b, 20% #514676"
+    "colors": "25% #a29ba6, 30% #b0c2cd, 20% #514676, 25% #afad7b"
   },
   {
     "species": "Neochmina ruficauda ruficauda",
@@ -60,7 +60,7 @@
     "cause": "Invasive species",
     "origin": "Mexico",
     "taxa": "Aves",
-    "colors": "25% #fcfbf0, 25% #c89e78, 25% #ab6d3a, 15% #42322e, 5% #826f6b"
+    "colors": "25% #fcfbf0, 25% #c89e78, 25% #ab6d3a, 15% #42322e, 10% #826f6b"
   },
   {
     "species": "Glaucidium mooreorum",
