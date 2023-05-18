@@ -164,7 +164,7 @@ function menuToggle() {
 		grid.style.filter = "grayscale(100%) brightness(50%)";
 		cellContent.style.pointerEvents = "none";
 		cellContent.style.filter = "grayscale(100%) brightness(50%)";
-		navPlus.style.transform = "rotate(45deg)";
+		navPlus.style.fill = "black";
 		navLinks.style.transform = "translateX(0%)";
 		menuState = true;
 	} else {
@@ -172,7 +172,7 @@ function menuToggle() {
 		grid.style.filter = "grayscale(0%) brightness(100%)";
 		cellContent.style.pointerEvents = "all";
 		cellContent.style.filter = "grayscale(0%) brightness(100%)";
-		navPlus.style.transform = "rotate(0deg)";
+		navPlus.style.fill = "white";
 		navLinks.style.transform = "translateX(-100%)";
 		menuState = false;
 	}
