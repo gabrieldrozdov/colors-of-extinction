@@ -367,5 +367,77 @@
     "origin": "Australia",
     "taxa": "Reptilia",
     "colors": "20% #907f5f, 30% #3b3023, 20% #826353, 30% #b1946f"
+  },
+  {
+    "species": "Laltris parishi",
+    "name": "Parish's Fanged Snake",
+    "extinct": 1930,
+    "cause": "Unknown",
+    "origin": "Haiti",
+    "taxa": "Reptilia",
+    "colors": "30% #907f5f, 30% #b1946f, 20% #826353, 20% #3b3023"
+  },
+  {
+    "species": "Podarcis filfolensis kieselbachi",
+    "name": "Malta Filfola Lizard",
+    "extinct": 2005,
+    "cause": "Invasive Species",
+    "origin": "Malta",
+    "taxa": "Reptilia",
+    "colors": "40% #434139, 10% #75716e, 30% #aeb492, 10% #ffe9ac, 10% #d2792f"
+  },
+  {
+    "species": "Nesiota elliptica",
+    "name": "St. Helena Olive",
+    "extinct": 2003,
+    "cause": "Habitat Destruction",
+    "origin": "St. Helena",
+    "taxa": "Angiospermorphyta",
+    "colors": "10% #c596b1, 20% #ac2c92, 10% #c9ef8a, 30% #89cb2b, 30% #275c24"
+  },
+  {
+    "species": "Oeceoclades seychellarum",
+    "name": "Oeceoclades seychellarum",
+    "extinct": 1902,
+    "cause": "Habitat Destruction, Invasive Species",
+    "origin": "Seychelles",
+    "taxa": "Angiospermorphyta",
+    "colors": "30% #475928, 30% #9db757, 20% #e3c95d, 10% #e8ace0, 10% #942213"
+  },
+  {
+    "species": "Mathieua galanthoides",
+    "name": "Mathieua galanthoides",
+    "extinct": "1900s",
+    "cause": "Habitat Destruction",
+    "origin": "Peru",
+    "taxa": "Angiospermorphyta",
+    "colors": "30% #78a044, 10% #accd6b, 10% #c4c671, 20% #bce2bd, 15% #d8c262, 15% #edeadd"
+  },
+  {
+    "species": "Marshallia grandiflora",
+    "name": "Appalachian Barbara's Buttons",
+    "extinct": 1919,
+    "cause": "Habitat Destruction",
+    "origin": "U.S.A",
+    "taxa": "Angiospermorphyta",
+    "colors": "30% #5c895e, 15% #7ba468, 15% #accd6b, 20% #cdafce, 20% #cd3fd1"
+  },
+  {
+    "species": "Calochortus indecorus",
+    "name": "Sexton Mountain Mariposa Lily",
+    "extinct": 1948,
+    "cause": "Habitat Destruction",
+    "origin": "U.S.A",
+    "taxa": "Angiospermorphyta",
+    "colors": "20% #445134, 20% #5d773f, 20% #a1bc80, 20% #ceccb6, 20% #c4a133"
+  },
+  {
+    "species": "Triaspis schliebenii",
+    "name": "Schlieben’s Triaspis",
+    "extinct": "1900s",
+    "cause": "Habitat Destruction",
+    "origin": "Tanzania",
+    "taxa": "Angiospermorphyta",
+    "colors": "20% #603f2e, 30% #475928, 25% #486d41, 10% #d859c0, 15% #c687ba"
   }
 ]
