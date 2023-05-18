@@ -223,5 +223,149 @@
     "origin": "Colombia",
     "taxa": "Amphibia",
     "colors": "20% #4c201a, 10% #803513, 30% #cad74a, 40% #9cd300"
+  },
+  {
+    "species": "Earias latimargo",
+    "name": "Christmas Island Bollworm",
+    "extinct": 1934,
+    "cause": "Habitat Destruction",
+    "origin": "Australia",
+    "taxa": "Arthropoda",
+    "colors": "40% #e0d090, 40% #cbd839, 15% #b5531d, 5% #6f2504"
+  },
+  {
+    "species": "Holcaspis brevicula",
+    "name": "Eyrewell Ground Beetle",
+    "extinct": 2005,
+    "cause": "Habitat Destruction",
+    "origin": "New Zealand",
+    "taxa": "Arthropoda",
+    "colors": "80% #2a2021, 10% #782a31, 10% #d3a5a3"
+  },
+  {
+    "species": "Libythea collenetei",
+    "name": "Marquesan Snout Butterfly",
+    "extinct": 2018,
+    "cause": "Habitat Destruction",
+    "origin": "French Polynesia",
+    "taxa": "Arthropoda",
+    "colors": "40% #e0a955, 40% #956b45, 15% #4e3828, 5% #25171a"
+  },
+  {
+    "species": "Argynnis hyperbius inconstans",
+    "name": "Laced Fritillary",
+    "extinct": 2019,
+    "cause": "Habitat Destruction",
+    "origin": "Australia",
+    "taxa": "Arthropoda",
+    "colors": "15% #daac64, 40% #db9805, 15% #582a00, 30% #250000"
+  },
+  {
+    "species": "Hesperia meskei pinocayo",
+    "name": "Rockland Meske’s Skipper",
+    "extinct": 2013,
+    "cause": "Habitat Destruction",
+    "origin": "U.S.A",
+    "taxa": "Arthropoda",
+    "colors": "40% #4d2800, 25% #cd9201, 25% #f9ca00, 10% #ba975b"
+  },
+  {
+    "species": "Pipistrellus murrayi",
+    "name": "Christmas Island Pipistrelle",
+    "extinct": 2012,
+    "cause": "Invasive Species",
+    "origin": "Australia",
+    "taxa": "Mammalia",
+    "colors": "20% #8b6d54, 45% #83562d, 35% #574d4c"
+  },
+  {
+    "species": "Rucervus schomburgk",
+    "name": "Schomburgk's Deer",
+    "extinct": 1938,
+    "cause": "Habitat Destruction & Poaching",
+    "origin": "Thailand",
+    "taxa": "Mammalia",
+    "colors": "30% #8f451b, 20% #a45a37, 20% #d39662, 30% #eda95c"
+  },
+  {
+    "species": "Diceros bicornis longipes",
+    "name": "Western Black Rhinoceros",
+    "extinct": 2011,
+    "cause": "Poaching",
+    "origin": "Cameroon",
+    "taxa": "Mammalia",
+    "colors": "20% #5c574b, 20% #937b5e, 30% #a29284, 30% #6b6968"
+  },
+  {
+    "species": "Rhinoceros sondaicus annamiticus",
+    "name": "Vietnamese Javan Rhino",
+    "extinct": 2010,
+    "cause": "Poaching",
+    "origin": "Vietnam, Laos, Cambodia",
+    "taxa": "Mammalia",
+    "colors": "40% #464a55, 20% #71768c, 30% #acb0b4, 10% #9d848c"
+  },
+  {
+    "species": "lcelaphus buselaphus buselaphus",
+    "name": "Bubal Hartebeest",
+    "extinct": 1923,
+    "cause": "Hunting",
+    "origin": "Algeria, Morocco",
+    "taxa": "Mammalia",
+    "colors": "20% #ae9e8d, 10% #5c504b, 20% #222b20, 30% #bf9176, 20% #dfc0a2"
+  },
+  {
+    "species": "Melomys rubicola",
+    "name": "Bramble Cay Melomys",
+    "extinct": 2015,
+    "cause": "Anthropogenic Climate Change",
+    "origin": "Australia",
+    "taxa": "Mammalia",
+    "colors": "20% #3b3d3a, 40% #8b8172, 30% #babdb5, 10% #d3bac4"
+  },
+  {
+    "species": "Lipotes vexillifer",
+    "name": "Baiji",
+    "extinct": 2002,
+    "cause": "Habitat Destruction, Hunting, Pollution",
+    "origin": "China",
+    "taxa": "Mammalia",
+    "colors": "40% #a3b7b5, 45% #6b7d7b, 15% #455860"
+  },
+  {
+    "species": "Chelonoidis abingdonii",
+    "name": "Pinta Island Tortoise",
+    "extinct": 2012,
+    "cause": "Habitat Destruction",
+    "origin": "Ecuador",
+    "taxa": "Reptilia",
+    "colors": "45% #565044, 20% #b3896d, 20% #e9b89f, 15% #fdd58d"
+  },
+  {
+    "species": "Cryptoblepharus egeriae",
+    "name": "Blue-tailed Skink",
+    "extinct": 1992,
+    "cause": "Invasive Species",
+    "origin": "Australia",
+    "taxa": "Reptilia",
+    "colors": "35% #79a3e5, 25% #18130e, 25% #645548, 15% #f1dcc2"
+  },
+  {
+    "species": "Cyclura cornuta onchiopsis",
+    "name": "Navassa Island Iguana",
+    "extinct": 1986,
+    "cause": "Hunting, Invasive Species",
+    "origin": "U.S.A",
+    "taxa": "Reptilia",
+    "colors": "15% #afadab, 30% #80807e, 10% #343e4e, 15% #515b6a, 30% #969da3"
+  },
+  {
+    "species": "Emoia nativitatis",
+    "name": "Christmas Island Forest Skink",
+    "extinct": 2017,
+    "cause": "Invasive Species",
+    "origin": "Australia",
+    "taxa": "Reptilia",
+    "colors": "20% #907f5f, 30% #3b3023, 20% #826353, 30% #b1946f"
   }
 ]
