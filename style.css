@@ -39,12 +39,12 @@ body {
 	background-color: #222222;
 }
 html {
-	font-size: 2vh;
+	font-size: 2dvh;
 }
 
 /* Structure */
 .container {
-	height: 100vh;
+	height: 100dvh;
 	overflow-y: hidden;
 }
 .grid {
@@ -52,17 +52,17 @@ html {
 	top: 0;
 	left: 0;
 	display: grid;
-	grid-template-rows: repeat(5, 20vh);
+	grid-template-rows: repeat(5, 20dvh);
 	grid-auto-flow: column;
 	justify-content: start;
-	height: 100vh;
+	height: 100dvh;
 	transition: filter .5s;
 }
 .cell {
 	aspect-ratio: 1 / 1;
 	position: relative;
-	width: 20vh;
-	height: 20vh;
+	width: 20dvh;
+	height: 20dvh;
 	cursor: pointer;
 	transition: filter .2s, opacity .2s, border .2s;
 	border: 0rem solid white;
@@ -85,7 +85,7 @@ html {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 40vh;
+	width: 40dvh;
 	aspect-ratio: 1 / 2;
 	background-color: white;
 	padding: 1rem;
@@ -93,7 +93,7 @@ html {
 	flex-direction: column;
 	align-items: center;
 	display: flex;
-	transform: translateY(-100vh);
+	transform: translateY(-100dvh);
 	transition: top .5s, left .5s, filter .2s, transform .5s;
 }
 .cell-grid {
@@ -185,7 +185,7 @@ html {
 	top: 0;
 	left: 0;
 	z-index: 9;
-	height: 20vh;
+	height: 20dvh;
 	cursor: pointer;
 	fill: white;
 	filter: unset;
@@ -205,10 +205,10 @@ html {
 	line-height: 1em;
 	letter-spacing: .03rem;
 	position: fixed;
-	top: 20vh;
+	top: 20dvh;
 	left: 0;
 	z-index: 9;
-	height: 20vh;
+	height: 20dvh;
 	filter: unset;
 	transition: transform .5s;
 	transform: translateX(-100%);
@@ -245,10 +245,10 @@ html {
 	z-index: 9;
 	background-color: white;
 	flex-direction: column;
-	width: 80vh;
-	height: 80vh;
-	top: 20vh;
-	left: 20vh;
+	width: 80dvh;
+	height: 80dvh;
+	top: 20dvh;
+	left: 20dvh;
 	padding: 1rem;
 	font-family: Bastardo, sans-serif;
 	display: flex;
@@ -293,11 +293,11 @@ html {
 	z-index: 9;
 	background-color: white;
 	flex-direction: column;
-	width: 80vh;
-	height: 80vh;
+	width: 80dvh;
+	height: 80dvh;
 	overflow-y: scroll;
-	top: 20vh;
-	left: 20vh;
+	top: 20dvh;
+	left: 20dvh;
 	padding: 1rem;
 	gap: 1rem;
 	font-family: Bastardo, sans-serif;
@@ -428,13 +428,13 @@ html {
 }
 
 /* Mobile styles */
-@media screen and (max-width: 100vh) {
+@media screen and (max-width: 100dvh) {
 	.cell-content {
 		position: fixed;
 		top: 0 !important;
 		left: 0 !important;
 		width: 100vw;
-		height: 100vh;
+		height: 100dvh;
 		z-index: 100;
 		aspect-ratio: unset;
 		filter: unset !important;
@@ -445,9 +445,9 @@ html {
 		display: flex;
 	}
 	.about {
-		height: 100vh;
+		height: 100dvh;
 		top: 0;
-		width: calc(100vw - 20vh);
+		width: calc(100vw - 20dvh);
 	}
 	.about-heading {
 		font-size: 2rem;
@@ -456,10 +456,10 @@ html {
 		grid-template-columns: 1fr;
 	}
 	.form {
-		height: 100vh;
+		height: 100dvh;
 		top: 0;
 		overflow-y: scroll;
-		width: calc(100vw - 20vh);
+		width: calc(100vw - 20dvh);
 	}
 	.form-heading {
 		font-size: 2rem;
@@ -479,9 +479,9 @@ html {
 		top: 0 !important;
 		left: 0 !important;
 		width: 100vw !important;
-		height: 100vh !important;
+		height: 100dvh !important;
 		z-index: 100 !important;
-		transform: translateY(0vh) !important;
+		transform: translateY(0dvh) !important;
 		filter: unset !important;
 		aspect-ratio: unset !important;
 		transition: unset !important;
